@@ -15,7 +15,7 @@ public class Question implements Serializable {
     private String question;
     private String imageURL;
     private ArrayList<String> answers = new ArrayList<>();
-    private Long answerIndex = Long.MAX_VALUE;
+    private int answerIndex = Integer.MAX_VALUE;
 
     public int getQuestionIndex() {
         return questionIndex;
@@ -49,11 +49,11 @@ public class Question implements Serializable {
         this.answers = answers;
     }
 
-    public Long getAnswerIndex() {
+    public int getAnswerIndex() {
         return answerIndex;
     }
 
-    public void setAnswerIndex(Long answerIndex) {
+    public void setAnswerIndex(int answerIndex) {
         this.answerIndex = answerIndex;
     }
 }

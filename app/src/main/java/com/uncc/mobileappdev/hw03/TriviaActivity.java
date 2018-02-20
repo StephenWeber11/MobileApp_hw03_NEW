@@ -160,18 +160,12 @@ public class TriviaActivity extends AppCompatActivity implements DownloadQuestio
     }
 
     /**
-     * Keeps track of right and wrong ansers
+     * Keeps track of right and wrong answers
      * @param questionIndex
      */
     private void checkAnswer(int questionIndex) {
         int usersAns = (rdGrpOptions.getCheckedRadioButtonId()) - 1; //Zero-based index
-        long originalAns = questions.get(questionIndex).getAnswerIndex();
-
-        if(originalAns < 100){
-            originalAns = originalAns / 10;
-        } else {
-            originalAns = Long.parseLong(Long.toString(originalAns).substring(0, 1));
-        }
+        int originalAns = questions.get(questionIndex).getAnswerIndex();
 
         if(usersAns == originalAns) {
             correctAnswersCount++;

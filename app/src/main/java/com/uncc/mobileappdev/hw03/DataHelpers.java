@@ -48,7 +48,7 @@ public class DataHelpers {
                     }
                     possibleAnswers.remove(possibleAnswers.size()-1); //Remove the last entry
                     question.setAnswers(possibleAnswers);
-                    question.setAnswerIndex(Long.parseLong(questionDetailsArray[index-1]));
+                    question.setAnswerIndex(Integer.parseInt(questionDetailsArray[index-1].substring(0,1)));
                     questionDetails.add(question);
 
                 }
